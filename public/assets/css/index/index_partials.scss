@@ -1,0 +1,9 @@
+//colors
+$pearl: #E4E6C3;
+$vermillion: #F05D23;
+$junebud: #C5D86D;
+
+@mixin window {
+    background-color: $pearl;
+    border: 5px solid $vermillion;
+}

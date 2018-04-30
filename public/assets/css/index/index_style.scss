@@ -1,0 +1,19 @@
+@import "index_partials.scss";
+
+body {
+    background-color: $junebud;
+    color: $vermillion;
+    font-family: 'Titan One', cursive;
+}
+
+#intro {
+    @include window;
+    width: 800px;
+    font-size: 40px;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 200px;
+}
