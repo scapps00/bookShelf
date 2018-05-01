@@ -18,6 +18,16 @@ a {
     text-align: center;
 }
 
+.books {
+    @include window;
+    width: 75%;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
 button {
     @include button;
 }
