@@ -12,3 +12,9 @@ $junebud: #C5D86D;
     text-decoration: none;
     color: $vermillion;
 }
+
+@mixin button {
+    background-color: $vermillion;
+    color: $pearl;
+    font-size: 20px;
+}

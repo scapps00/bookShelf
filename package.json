@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/scapps00/bookShelf/issues"
   },
-  "homepage": "https://github.com/scapps00/bookShelf#readme"
+  "homepage": "https://github.com/scapps00/bookShelf#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0",
+    "path": "^0.12.7"
+  }
 }
