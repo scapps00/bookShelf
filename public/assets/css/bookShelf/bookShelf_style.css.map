@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,IAAK;EACD,gBAAgB,ECAV,OAAO;EDCb,KAAK,ECFI,OAAO;EDGhB,WAAW,EAAE,oBAAoB;;AAGrC,CAAE;ECGE,eAAe,EAAE,IAAI;EACrB,KAAK,EAVI,OAAO;;ADUpB,IAAK;ECND,gBAAgB,EALZ,OAAO;EAMX,MAAM,EAAE,iBAAqB;EDO7B,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,IAAI;EACf,OAAO,EAAE,IAAI;EACb,UAAU,EAAE,MAAM",
+"sources": ["bookShelf_style.scss","../partials.scss"],
+"names": [],
+"file": "bookShelf_style.css"
+}

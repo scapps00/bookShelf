@@ -10,18 +10,10 @@ a {
     @include fixAnchors;
 }
 
-#intro {
+.top {
     @include window;
-    width: 800px;
+    width: 100%;
     font-size: 60px;
     padding: 10px;
     text-align: center;
-    display: block;
-    margin: auto;
-    position: relative;
-    top: 250px;
-
-    a {
-        font-size: 40px;
-    }
 }

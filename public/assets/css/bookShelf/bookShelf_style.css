@@ -7,18 +7,12 @@ a {
   text-decoration: none;
   color: #F05D23; }
 
-#intro {
+.top {
   background-color: #E4E6C3;
   border: 5px solid #F05D23;
-  width: 800px;
+  width: 100%;
   font-size: 60px;
   padding: 10px;
-  text-align: center;
-  display: block;
-  margin: auto;
-  position: relative;
-  top: 250px; }
-  #intro a {
-    font-size: 40px; }
+  text-align: center; }
 
-/*# sourceMappingURL=index_style.css.map */
+/*# sourceMappingURL=bookShelf_style.css.map */
