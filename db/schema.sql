@@ -1,0 +1,11 @@
+CREATE TABLE books (
+	id INTEGER(10) AUTO_INCREMENT NOT NULL,
+    title VARCHAR(100) NOT NULL,
+    author VARCHAR(100) NOT NULL,
+    pubYear INTEGER(4) NOT NULL,
+    publisher VARCHAR(100) NOT NULL,
+    pages INTEGER(6) NOT NULL,
+    summary VARCHAR(2000) NOT NULL,
+    keyword VARCHAR(100) NOT NULL,
+    PRIMARY KEY (id)
+);
