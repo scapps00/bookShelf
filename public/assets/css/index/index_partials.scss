@@ -7,3 +7,8 @@ $junebud: #C5D86D;
     background-color: $pearl;
     border: 5px solid $vermillion;
 }
+
+@mixin fixAnchors {
+    text-decoration: none;
+    color: $vermillion;
+}

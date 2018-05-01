@@ -3,16 +3,22 @@ body {
   color: #F05D23;
   font-family: 'Titan One', cursive; }
 
+a {
+  text-decoration: none;
+  color: #F05D23; }
+
 #intro {
   background-color: #E4E6C3;
   border: 5px solid #F05D23;
   width: 800px;
-  font-size: 40px;
+  font-size: 60px;
   padding: 10px;
   text-align: center;
   display: block;
   margin: auto;
   position: relative;
   top: 200px; }
+  #intro a {
+    font-size: 40px; }
 
 /*# sourceMappingURL=index_style.css.map */

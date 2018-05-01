@@ -6,14 +6,22 @@ body {
     font-family: 'Titan One', cursive;
 }
 
+a {
+    @include fixAnchors;
+}
+
 #intro {
     @include window;
     width: 800px;
-    font-size: 40px;
+    font-size: 60px;
     padding: 10px;
     text-align: center;
     display: block;
     margin: auto;
     position: relative;
     top: 200px;
+
+    a {
+        font-size: 40px;
+    }
 }
