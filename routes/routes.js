@@ -17,4 +17,10 @@ module.exports = function(app) {
         });
     });
 
+    app.get("/listByAuthor", function(req, res) {
+        books.listByAuthor(function(data) {
+            res.send(data);
+        });
+    });
+
 };

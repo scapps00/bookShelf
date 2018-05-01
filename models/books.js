@@ -7,6 +7,12 @@ const books = {
         orm.listByTitle("books", function(res) {
             cb(res);
         });
+    },
+
+    listByAuthor: function(cb) {
+        orm.listByAuthor("books", function(res) {
+            cb(res);
+        });
     }
 
 };

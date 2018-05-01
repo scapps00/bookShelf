@@ -9,6 +9,14 @@ var orm = {
             if (err) throw err;
             cb(results);
         });
+    },
+
+    listByAuthor: function(table, cb) {
+        var queryString = "SELECT * FROM " + table + " ORDER BY author ASC;";
+        connection.query(queryString, function(err, results) {
+            if (err) throw err;
+            cb(results);
+        });
     }
 
 };

@@ -20,14 +20,40 @@ a {
 
 .books {
     @include window;
+    font-family: 'PT Serif', serif;
     width: 75%;
-    font-size: 30px;
+    font-size: 20px;
     padding: 10px;
-    text-align: center;
+    text-align: left;
     display: block;
     margin: auto;
 }
 
 button {
     @include button;
+}
+
+.boldAuthor {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.boldItalicTitle {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 25px;
+}
+
+.bookPhoto {
+    display: block;
+    margin: auto;
+    height: 300px;
+}
+
+.bar {
+    border-top: 3px $vermillion solid;
+    width: 500px;
+    height: 2px;
+    display: block;
+    margin: auto;
 }
