@@ -3,7 +3,13 @@ function loopForLists(results) {
     $(".books").text("");
     var end = results.length;
     for (i = 0; i < end; i++) {
-        $(".books").append("<img class='bookPhoto' src='assets/img/books/" + results[i].keyword + ".jpg' alt=" + results[i].keyword + "><br><br><span class='boldAuthor'>" + results[i].author + ".</span> <span class='boldItalicTitle'>" + results[i].title + ".</span><br><br>Published " + results[i].pubYear + " by " + results[i].publisher + ". " + results[i].pages + " pages.<br><br>" + results[i].summary);
+        var lengthForSplit = results[i].author.length;
+        var split = results[i].author.split("");
+        if (split[lengthForSplit - 1] !== ".") {
+            $(".books").append("<img class='bookPhoto' src='assets/img/books/" + results[i].keyword + ".jpg' alt=" + results[i].keyword + "><br><br><span class='boldAuthor'>" + results[i].author + ".</span> <span class='boldItalicTitle'>" + results[i].title + ".</span><br><br>Published " + results[i].pubYear + " by " + results[i].publisher + ". " + results[i].pages + " pages.<br><br>" + results[i].summary);
+        } else {
+            $(".books").append("<img class='bookPhoto' src='assets/img/books/" + results[i].keyword + ".jpg' alt=" + results[i].keyword + "><br><br><span class='boldAuthor'>" + results[i].author + "</span> <span class='boldItalicTitle'>" + results[i].title + ".</span><br><br>Published " + results[i].pubYear + " by " + results[i].publisher + ". " + results[i].pages + " pages.<br><br>" + results[i].summary);
+        }
         if (i < end - 1) {
             $(".books").append("<br><br><br><span class='bar'></span><br><br>");
         }
