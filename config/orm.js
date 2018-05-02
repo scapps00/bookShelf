@@ -17,7 +17,15 @@ var orm = {
             if (err) throw err;
             cb(results);
         });
-    }
+    },
+
+    listJustTitle: function(table, cb) {
+        var queryString = "SELECT title FROM " + table + " ORDER BY title ASC;";
+        connection.query(queryString, function(err, results) {
+            if (err) throw err;
+            cb(results);
+        });
+    }   
 
 };
 

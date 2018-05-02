@@ -10,6 +10,18 @@ function loopForLists(results) {
     }
 };
 
+//loop for just titles
+function loopForJustTitles(results) {
+    $(".books").text("");
+    var end = results.length;
+    for (i = 0; i < end; i++) {
+        $(".books").append("<span class='boldItalicTitle'>" + results[i].title + "</span>");
+        if (i < end - 1) {
+            $(".books").append("<br>");
+        }
+    }
+};
+
 //click for List by Title
 $("#title").click(function() {
     event.preventDefault;
@@ -17,7 +29,6 @@ $("#title").click(function() {
         method: "GET",
         url: "/listByTitle"
     }).done(function(results) {
-        console.log(results.length);
         loopForLists(results);
     });
 });
@@ -29,7 +40,17 @@ $("#author").click(function() {
         method: "GET",
         url: "/listByAuthor"
     }).done(function(results) {
-        console.log(results.length);
         loopForLists(results);
+    });
+});
+
+//click for List Just Title
+$("#justTitle").click(function() {
+    event.preventDefault;
+    $.ajax({
+        method: "GET",
+        url: "/listJustTitle"
+    }).done(function(results) {
+        loopForJustTitles(results);
     });
 });

@@ -23,4 +23,10 @@ module.exports = function(app) {
         });
     });
 
+    app.get("/listJustTitle", function(req, res) {
+        books.listJustTitle(function(data) {
+            res.send(data);
+        });
+    });
+
 };

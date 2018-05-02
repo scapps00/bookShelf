@@ -12,10 +12,14 @@ a {
 
 .top {
     @include window;
-    width: 100%;
+    width: 95%;
     font-size: 60px;
     padding: 10px;
     text-align: center;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 5px;
 }
 
 .books {

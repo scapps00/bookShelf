@@ -13,6 +13,12 @@ const books = {
         orm.listByAuthor("books", function(res) {
             cb(res);
         });
+    },
+
+    listJustTitle: function(cb) {
+        orm.listJustTitle("books", function(res) {
+            cb(res);
+        });
     }
 
 };
