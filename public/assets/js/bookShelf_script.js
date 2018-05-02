@@ -46,6 +46,12 @@ function loopForJustCover(results) {
     }
 };
 
+//action for random book
+function randomBook(results) {
+    $(".books").text("");
+    $(".books").append("<img class='bookPhoto' src='assets/img/books/" + results[0].keyword + ".jpg' alt=" + results[0].keyword + "><br><br><span class='boldAuthor'>" + results[0].author + ".</span> <span class='boldItalicTitle'>" + results[0].title + ".</span><br><br>Published " + results[0].pubYear + " by " + results[0].publisher + ". " + results[0].pages + " pages.<br><br>" + results[0].summary);
+};
+
 //click for List by Title
 $("#title").click(function() {
     event.preventDefault;
@@ -98,5 +104,16 @@ $("#justCover").click(function() {
         url: "/listJustCover"
     }).done(function(results) {
         loopForJustCover(results);
+    });
+});
+
+//click for Random Book
+$("#randomBook").click(function() {
+    event.preventDefault;
+    $.ajax({
+        method: "GET",
+        url: "/randomBook"
+    }).done(function(results) {
+        randomBook(results);
     });
 });

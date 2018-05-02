@@ -41,6 +41,21 @@ var orm = {
             if (err) throw err;
             cb(results);
         });
+    },
+
+    randomBook: function(table, cb) {
+        var queryString = "SELECT id FROM " + table;
+        connection.query(queryString, function(err, results) {
+            if (err) throw err;
+            var numBooks = results.length;
+            var pick = Math.floor(Math.random() * numBooks);
+            var pickId = results[pick].id;
+            var queryString2 = "SELECT * FROM " + table + " WHERE id = " + pickId;
+            connection.query(queryString2, function(err, results) {
+                if (err) throw err;
+                cb(results);
+            });
+        });
     } 
 
 };

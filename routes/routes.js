@@ -41,4 +41,10 @@ module.exports = function(app) {
         });
     });
 
+    app.get("/randomBook", function(req, res) {
+        books.randomBook(function(data) {
+            res.send(data);
+        });
+    });
+
 };

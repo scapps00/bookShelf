@@ -31,6 +31,12 @@ const books = {
         orm.listJustCover("books", function(res) {
             cb(res);
         });
+    },
+
+    randomBook: function(cb) {
+        orm.randomBook("books", function(res) {
+            cb(res);
+        });
     }
 
 };
