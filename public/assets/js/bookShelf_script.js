@@ -59,7 +59,7 @@ function randomBook(results) {
 };
 
 //click for List by Title
-$("#title").click(function() {
+$("#title").click(function(event) {
     event.preventDefault;
     $.ajax({
         method: "GET",
@@ -70,7 +70,7 @@ $("#title").click(function() {
 });
 
 //click for List by Author
-$("#author").click(function() {
+$("#author").click(function(event) {
     event.preventDefault;
     $.ajax({
         method: "GET",
@@ -81,7 +81,7 @@ $("#author").click(function() {
 });
 
 //click for List Just Title
-$("#justTitle").click(function() {
+$("#justTitle").click(function(event) {
     event.preventDefault;
     $.ajax({
         method: "GET",
@@ -92,7 +92,7 @@ $("#justTitle").click(function() {
 });
 
 //click for List Just Author
-$("#justAuthor").click(function() {
+$("#justAuthor").click(function(event) {
     event.preventDefault;
     $.ajax({
         method: "GET",
@@ -103,7 +103,7 @@ $("#justAuthor").click(function() {
 });
 
 //click for List Just Cover
-$("#justCover").click(function() {
+$("#justCover").click(function(event) {
     event.preventDefault;
     $.ajax({
         method: "GET",
@@ -114,7 +114,7 @@ $("#justCover").click(function() {
 });
 
 //click for Random Book
-$("#randomBook").click(function() {
+$("#randomBook").click(function(event) {
     event.preventDefault;
     $.ajax({
         method: "GET",

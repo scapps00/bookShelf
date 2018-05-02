@@ -30,6 +30,17 @@ a {
   display: block;
   margin: auto; }
 
+.notice {
+  background-color: #E4E6C3;
+  border: 5px solid #F05D23;
+  font-family: 'PT Serif', serif;
+  width: 75%;
+  font-size: 15px;
+  padding: 10px;
+  text-align: center;
+  display: block;
+  margin: auto; }
+
 button {
   background-color: #F05D23;
   color: #E4E6C3;
