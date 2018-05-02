@@ -11,13 +11,37 @@ function loopForLists(results) {
 };
 
 //loop for just titles
-function loopForJustTitles(results) {
+function loopForJustTitle(results) {
     $(".books").text("");
     var end = results.length;
     for (i = 0; i < end; i++) {
         $(".books").append("<span class='boldItalicTitle'>" + results[i].title + "</span>");
         if (i < end - 1) {
             $(".books").append("<br>");
+        }
+    }
+};
+
+//loop for just authors
+function loopForJustAuthor(results) {
+    $(".books").text("");
+    var end = results.length;
+    for (i = 0; i < end; i++) {
+        $(".books").append("<span class='boldAuthor'>" + results[i].author + "</span>");
+        if (i < end - 1) {
+            $(".books").append("<br>");
+        }
+    }
+};
+
+//loop for just cover
+function loopForJustCover(results) {
+    $(".books").text("");
+    var end = results.length;
+    for (i = 0; i < end; i++) {
+        $(".books").append("<img class='bookPhoto' src='assets/img/books/" + results[i].keyword + ".jpg' alt=" + results[i].keyword + ">");
+        if (i < end - 1) {
+            $(".books").append("<br><br>");
         }
     }
 };
@@ -51,6 +75,28 @@ $("#justTitle").click(function() {
         method: "GET",
         url: "/listJustTitle"
     }).done(function(results) {
-        loopForJustTitles(results);
+        loopForJustTitle(results);
+    });
+});
+
+//click for List Just Author
+$("#justAuthor").click(function() {
+    event.preventDefault;
+    $.ajax({
+        method: "GET",
+        url: "/listJustAuthor"
+    }).done(function(results) {
+        loopForJustAuthor(results);
+    });
+});
+
+//click for List Just Cover
+$("#justCover").click(function() {
+    event.preventDefault;
+    $.ajax({
+        method: "GET",
+        url: "/listJustCover"
+    }).done(function(results) {
+        loopForJustCover(results);
     });
 });

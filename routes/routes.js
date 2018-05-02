@@ -29,4 +29,16 @@ module.exports = function(app) {
         });
     });
 
+    app.get("/listJustAuthor", function(req, res) {
+        books.listJustAuthor(function(data) {
+            res.send(data);
+        });
+    });
+
+    app.get("/listJustCover", function(req, res) {
+        books.listJustCover(function(data) {
+            res.send(data);
+        });
+    });
+
 };

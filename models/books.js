@@ -19,6 +19,18 @@ const books = {
         orm.listJustTitle("books", function(res) {
             cb(res);
         });
+    },
+
+    listJustAuthor: function(cb) {
+        orm.listJustAuthor("books", function(res) {
+            cb(res);
+        });
+    },
+
+    listJustCover: function(cb) {
+        orm.listJustCover("books", function(res) {
+            cb(res);
+        });
     }
 
 };
