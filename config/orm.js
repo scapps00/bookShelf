@@ -28,7 +28,7 @@ var orm = {
     },
     
     listJustAuthor: function(table, cb) {
-        var queryString = "SELECT author FROM " + table + " ORDER BY author ASC;";
+        var queryString = "SELECT DISTINCT author FROM " + table + " ORDER BY author ASC;";
         connection.query(queryString, function(err, results) {
             if (err) throw err;
             cb(results);
