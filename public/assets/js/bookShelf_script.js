@@ -1,3 +1,10 @@
+//display .books if it's not visible
+function displayBooks() {
+    if ($(".books").css("display") == "none") {
+        $(".books").css("display", "block");
+    }
+}
+
 //loops through lists and sends to DOM
 function loopForLists(results) {
     $(".books").text("");
@@ -65,6 +72,7 @@ $("#title").click(function(event) {
         method: "GET",
         url: "/listByTitle"
     }).done(function(results) {
+        displayBooks();
         loopForLists(results);
     });
 });
@@ -76,6 +84,7 @@ $("#author").click(function(event) {
         method: "GET",
         url: "/listByAuthor"
     }).done(function(results) {
+        displayBooks();
         loopForLists(results);
     });
 });
@@ -87,6 +96,7 @@ $("#justTitle").click(function(event) {
         method: "GET",
         url: "/listJustTitle"
     }).done(function(results) {
+        displayBooks();
         loopForJustTitle(results);
     });
 });
@@ -98,6 +108,7 @@ $("#justAuthor").click(function(event) {
         method: "GET",
         url: "/listJustAuthor"
     }).done(function(results) {
+        displayBooks();
         loopForJustAuthor(results);
     });
 });
@@ -109,6 +120,7 @@ $("#justCover").click(function(event) {
         method: "GET",
         url: "/listJustCover"
     }).done(function(results) {
+        displayBooks();
         loopForJustCover(results);
     });
 });
@@ -120,6 +132,7 @@ $("#randomBook").click(function(event) {
         method: "GET",
         url: "/randomBook"
     }).done(function(results) {
+        displayBooks();
         randomBook(results);
     });
 });
