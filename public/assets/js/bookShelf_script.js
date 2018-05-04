@@ -9,7 +9,7 @@ function displayBooks() {
 function loopForLists(results) {
     $(".books").text("");
     var end = results.length;
-    for (i = 0; i < end; i++) {
+    for (var i = 0; i < end; i++) {
         var lengthForSplit = results[i].author.length;
         var split = results[i].author.split("");
         if (split[lengthForSplit - 1] !== ".") {
@@ -27,7 +27,7 @@ function loopForLists(results) {
 function loopForJustTitle(results) {
     $(".books").text("");
     var end = results.length;
-    for (i = 0; i < end; i++) {
+    for (var i = 0; i < end; i++) {
         $(".books").append("<span class='boldItalicTitle'>" + results[i].title + "</span>");
         if (i < end - 1) {
             $(".books").append("<br>");
@@ -39,7 +39,7 @@ function loopForJustTitle(results) {
 function loopForJustAuthor(results) {
     $(".books").text("");
     var end = results.length;
-    for (i = 0; i < end; i++) {
+    for (var i = 0; i < end; i++) {
         $(".books").append("<span class='boldAuthor'>" + results[i].author + "</span>");
         if (i < end - 1) {
             $(".books").append("<br>");
@@ -51,8 +51,20 @@ function loopForJustAuthor(results) {
 function loopForJustCover(results) {
     $(".books").text("");
     var end = results.length;
-    for (i = 0; i < end; i++) {
+    for (var i = 0; i < end; i++) {
         $(".books").append("<img class='bookPhoto' src='assets/img/books/" + results[i].keyword + ".jpg' alt=" + results[i].keyword + ">");
+        if (i < end - 1) {
+            $(".books").append("<br><br>");
+        }
+    }
+};
+
+//loop for isbn
+function loopForIsbn(results) {
+    $(".books").text("");
+    var end = results.length;
+    for(var i = 0; i < end; i++) {
+        $(".books").append("<span class='boldItalicTitle'>" + results[i].title + "</span> ISBN-13: " + results[i].isbn + ".");
         if (i < end - 1) {
             $(".books").append("<br><br>");
         }
@@ -122,6 +134,18 @@ $("#justCover").click(function(event) {
     }).done(function(results) {
         displayBooks();
         loopForJustCover(results);
+    });
+});
+
+//click for isbn
+$("#isbn").click(function(event) {
+    event.preventDefault();
+    $.ajax({
+        method: "GET",
+        url: "/isbn"
+    }).done(function(results) {
+        displayBooks();
+        loopForIsbn(results);
     });
 });
 

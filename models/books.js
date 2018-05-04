@@ -33,6 +33,12 @@ const books = {
         });
     },
 
+    isbn: function(cb) {
+        orm.isbn("books", "isbn", function(res) {
+            cb(res);
+        });
+    },
+
     randomBook: function(cb) {
         orm.randomBook("books", function(res) {
             cb(res);

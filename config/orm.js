@@ -43,6 +43,14 @@ var orm = {
         });
     },
 
+    isbn: function(table1, table2, cb) {
+        var queryString = "SELECT " + table1 + ".title, " + table1 + ".keyword, " + table2 + ".keyword, " + table2 + ".isbn FROM " + table1 + " LEFT JOIN " + table2 + " ON " + table1 + ".keyword = " + table2 + ".keyword ORDER BY " + table1 + ".title ASC";
+        connection.query(queryString, function(err, results) {
+            if (err) throw err;
+            cb(results);
+        });
+    },
+
     randomBook: function(table, cb) {
         var queryString = "SELECT id FROM " + table;
         connection.query(queryString, function(err, results) {

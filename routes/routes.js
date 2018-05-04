@@ -41,6 +41,12 @@ module.exports = function(app) {
         });
     });
 
+    app.get("/isbn", function(req, res) {
+        books.isbn(function(data) {
+            res.send(data);
+        });
+    });
+
     app.get("/randomBook", function(req, res) {
         books.randomBook(function(data) {
             res.send(data);
